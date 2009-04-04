@@ -125,6 +125,9 @@ module CapGun
 
 Comment: #{capistrano[:comment] || "[none given]"}
 
+LOG:
+#{ `git log #{capistrano[:previous_revision]}..#{capistrano[:current_revision]}`}
+
 Nerd details
 ============
 Release: #{capistrano[:current_release]}
